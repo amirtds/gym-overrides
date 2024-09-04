@@ -67,9 +67,3 @@ class GymOverridesConfig(AppConfig):
                 },
             },
         }
-
-    def ready(self, *args, **kwargs):
-        """
-        Register signals on app loding.
-        """
-        from . import signals  # noqa: F401
