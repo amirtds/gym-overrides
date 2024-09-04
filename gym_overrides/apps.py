@@ -22,13 +22,6 @@ class GymOverridesConfig(AppConfig):
     verbose_name = 'gym_overrides'
 
     plugin_app = {
-        PluginURLs.CONFIG: {
-            ProjectType.LMS: {
-                PluginURLs.NAMESPACE: u'gym_overrides',
-                PluginURLs.REGEX: u'^gym_overrides/',
-                PluginURLs.RELATIVE_PATH: u'urls',
-            }
-        },
         PluginSettings.CONFIG: {
             ProjectType.LMS: {
                 SettingsType.COMMON: {
