@@ -10,6 +10,7 @@ setup(
     packages=[
         'gym_overrides',
     ],
+    include_package_data=True,
     entry_points={
         'lms.djangoapp': [
             'gym_overrides = gym_overrides.apps:GymOverridesConfig',

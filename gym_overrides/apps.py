@@ -9,7 +9,6 @@ try:
     from openedx.core.djangoapps.plugins.constants import ProjectType, SettingsType
     plugin_initiated = True
 except ImportError:
-    from django.utils.translation import gettext_noop as _
     plugin_initiated = False
 
 
