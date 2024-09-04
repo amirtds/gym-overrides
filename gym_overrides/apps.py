@@ -44,12 +44,24 @@ class GymOverridesConfig(AppConfig):
                 ProjectType.LMS: {
                     SettingsType.COMMON: {
                         PluginSettings.RELATIVE_PATH: 'settings.common',
-                    }
+                    },
+                    SettingsType.TEST: {
+                        PluginSettings.RELATIVE_PATH: 'settings.test',
+                    },
+                    SettingsType.PRODUCTION: {
+                        PluginSettings.RELATIVE_PATH: 'settings.production',
+                    },
                 },
                 ProjectType.CMS: {
                     SettingsType.COMMON: {
                         PluginSettings.RELATIVE_PATH: 'settings.common',
-                    }
+                    },
+                    SettingsType.TEST: {
+                        PluginSettings.RELATIVE_PATH: 'settings.test',
+                    },
+                    SettingsType.PRODUCTION: {
+                        PluginSettings.RELATIVE_PATH: 'settings.production',
+                    },
                 },
             },
         }
