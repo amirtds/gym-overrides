@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='gym_overrides',
@@ -7,10 +7,11 @@ setup(
     author_email='amirtds@gmail.com',
     license='MIT',
     description='Customizing The Gymnasium Open edX Instance Plugin',
-    packages=[
-        'gym_overrides',
-    ],
+    packages=find_packages(
+        include=['gym_overrides', 'gym_overrides.*']
+    ),
     include_package_data=True,
+    zip_safe=False,
     entry_points={
         'lms.djangoapp': [
             'gym_overrides = gym_overrides.apps:GymOverridesConfig',
