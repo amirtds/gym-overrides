@@ -3,13 +3,15 @@ App configuration for gym_overrides.
 """
 
 from django.apps import AppConfig
+from django.conf import settings
+from edx_django_utils.plugins import PluginSettings, PluginURLs
 try:
-    from openedx.core.djangoapps.plugins.constants import (PluginSettings,
-                                                       PluginURLs, ProjectType,
-                                                       SettingsType)
+    from openedx.core.djangoapps.plugins.constants import ProjectType, SettingsType
     plugin_initiated = True
 except ImportError:
+    from django.utils.translation import gettext_noop as _
     plugin_initiated = False
+
 
 
 EXTENSIONS_APP_NAME = 'gym_overrides'
