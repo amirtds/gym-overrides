@@ -123,6 +123,6 @@ def _generate_certificate(prev_fn, user, course_key, status, enrollment_mode, co
         created_msg = 'Certificate was created.'
     else:
         created_msg = 'Certificate already existed and was updated.'
-    log.info(f'Generated certificate with status {cert.status}, mode {cert.mode} and grade {cert.grade} for {user.id} '
+    log.info(f'Generated Accredible certificate with status {cert.status}, mode {cert.mode} and grade {cert.grade} for {user.id} '
              f': {course_key}. {created_msg}')
     return cert
