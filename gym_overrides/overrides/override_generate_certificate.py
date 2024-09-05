@@ -9,8 +9,20 @@ from uuid import uuid4
 import logging
 import requests
 import json
+import re
+from html import unescape
+
 
 log = logging.getLogger(__name__)
+
+def strip_html(text):
+    # Remove HTML tags
+    text = re.sub('<[^<]+?>', '', text)
+    # Unescape HTML entities
+    text = unescape(text)
+    # Remove extra whitespace
+    text = ' '.join(text.split())
+    return text
 
 def generate_accredible_certificate(user, course_id, status, course_grade):
     try:
@@ -23,12 +35,12 @@ def generate_accredible_certificate(user, course_id, status, course_grade):
             "credential": {
                 "name": course.display_name or str(course_id),
                 "group_name": course.display_name or str(course_id),
-                "description": description,
+                "description": strip_html(description),
                 "achievement_id": str(course_id),
                 "course_link": f"/courses/{course_id}/about",
                 "approve": approve,
                 "template_name": str(course_id),
-                "grade": course_grade,
+                "grade": int(course_grade * 100),
                 "recipient": {
                     "name": profile.name,
                     "email": user.email
