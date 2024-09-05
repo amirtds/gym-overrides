@@ -40,7 +40,7 @@ def generate_accredible_certificate(user, course_id, status, course_grade):
                 "course_link": f"/courses/{course_id}/about",
                 "approve": approve,
                 "template_name": str(course_id),
-                "grade": int(course_grade * 100),
+                "grade": int(float(course_grade) * 100),
                 "recipient": {
                     "name": profile.name,
                     "email": user.email
