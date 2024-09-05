@@ -92,7 +92,7 @@ def _generate_certificate(prev_fn, user, course_key, status, enrollment_mode, co
         uuid = existing_certificate.verify_uuid
     else:
         uuid = uuid4().hex
-    
+
     # Generate Accredible certificate
     accredible_result = generate_accredible_certificate(user, course_key, status, course_grade)
     
