@@ -13,3 +13,4 @@ def plugin_settings(settings):
     settings.OVERRIDE_IS_ELIGIBLE_FOR_CERTIFICATE = 'gym_overrides.overrides.override_is_eligible_for_certificate.is_eligible_for_certificate'
     settings.OVERRIDE_CERTIFICATE_STATUS = 'gym_overrides.overrides.override_certificate_status.certificate_status'
     settings.OVERRIDE_GET_CERTIFICATE_URL = 'gym_overrides.overrides.override_get_certificate_url.get_certificate_url'
+    settings.OVERRIDE_CERT_INFO = 'gym_overrides.overrides.override_cert_info._cert_info'
