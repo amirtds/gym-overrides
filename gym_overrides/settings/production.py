@@ -1,2 +1,4 @@
+import lms.djangoapps.static_template_view.urls
+
 def plugin_settings(settings):
-    pass
+    lms.djangoapps.static_template_view.urls.urlpatterns = []
