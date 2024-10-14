@@ -4,7 +4,7 @@ from lms.djangoapps.courseware.access import has_access
 from lms.djangoapps.courseware.tabs import _get_dynamic_tabs
 
 
-def get_course_tab_list(user, course):
+def get_course_tab_list(prev_fn, user, course):
     """
     Retrieves the course tab list from xmodule.tabs and manipulates the set as necessary
     """
